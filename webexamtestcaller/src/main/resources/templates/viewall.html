@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns=http://www.w3.org/1999/xhtml xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Bank management system</title>
+</head>
+<body>
+
+	<table border="1">
+		<tr>
+			<th>Book code</th>
+			<th>Title</th>
+			<th>Author</th>
+			<th>Category</th>
+			<th colspan=2>Actions</th>
+		</tr>
+		<tr th:each="bk : ${dsbook}">
+			<td th:text="${bk.bookcode}"></td>
+			<td th:text="${bk.title}"></td>
+			<td th:text="${bk.author}"></td>
+			<td th:text="${bk.category}"></td>
+			<td><a th:href="@{/book/approve/}+${bk.bookcode}">Approve</a></td>
+			<td><a th:href="@{/book/viewToDel/}+${bk.bookcode}">Delete</a></td>
+		</tr>
+	</table>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<html>
+<body>
+	<form method="get"  th:action="@{/book/del/}+${bk.bookcode}"th:object="${bk}">
+	<p>Bookcode</p>
+	<input type="text"  th:value="${bk.bookcode}"   disabled="true"  /> 
+	<p>Title</p>
+	<input type="text"  th:value="${bk.title}"   disabled="true"  /> 
+	<p>Author</p>
+	<input type="text"   th:value="${bk.author}"  disabled="true"  />
+	<p>Category</p>
+	<input type="text"   th:value="${bk.category}"  disabled="true"  />
+	<p>Approve</p>
+	<input type="text"   th:value="${bk.approved}"  disabled="true"  />
+	<button type= submit >Xoa</button>
+	</form>
+</body>
+</html>
